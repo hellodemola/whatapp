@@ -44,6 +44,27 @@
                         </p>
                     </div>
                 </div>
+
+                <br>
+
+                <div class="row">
+                        <div class="col">
+                            <br>
+                            <h5>Send message with an added number and message</h5>
+                            <hr>
+                            <p>
+                                <label for="phone">Phone</label>
+                                <input id="text2" type="text" placeholder="Enter mobile number">
+                            </p>
+                            <p>  <label for="message">Message</label>
+                                <input id="message" type="text" placeholder="Please enter message"> 
+                            
+                            </p>
+                            <p>
+                                    <a id="whatsapp2" data-action="share/whatsapp/share"> <button class="btn btn-success"> <i class="fa fa-whatsapp"></i> Share </button> </a>
+                            </p>
+                        </div>
+                    </div>
         </div>
 
         <script>
@@ -51,6 +72,15 @@
                 var whatAPP = 'https://api.whatsapp.com/send?phone=234'
                 var phoneNumber = document.getElementById('text').value;
                 var msg = '&text=Connect%20to%20Wildreams'
+                var url = whatAPP + phoneNumber + msg;
+         
+                window.location.href = url;
+            }
+
+            document.getElementById('whatsapp2').onclick= function(){
+                var whatAPP = 'https://api.whatsapp.com/send?phone=234'
+                var phoneNumber = document.getElementById('text2').value;
+                var msg = '&text=' + document.getElementById('message').value;
                 var url = whatAPP + phoneNumber + msg;
          
                 window.location.href = url;
