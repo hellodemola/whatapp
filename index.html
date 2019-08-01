@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Share on whatAPP</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    </head>
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+         
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+    </style>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <br>
+                    <h5>Send message without adding a number</h5>
+                    <hr>
+                    <p>Share on whatsApp | 
+                    <a href="https://api.whatsapp.com/send?text=Connect%20to%20Wildreams" data-action="share/whatsapp/share"> <button class="btn btn-success"> <i class="fa fa-whatsapp"></i> Share </button> </a>
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                    <div class="col">
+                        <br>
+                        <h5>Send message with an added number</h5>
+                        <hr>
+                        <p><input id="text" type="text" placeholder="Enter mobile number"> | 
+                        <a id="whatsapp" data-action="share/whatsapp/share"> <button class="btn btn-success"> <i class="fa fa-whatsapp"></i> Share </button> </a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+        <script>
+            document.getElementById('whatsapp').onclick= function(){
+                var whatAPP = 'https://api.whatsapp.com/send?phone=234'
+                var phoneNumber = document.getElementById('text').value;
+                var msg = '&text=Connect%20to%20Wildreams'
+                var url = whatAPP + phoneNumber + msg;
+         
+                window.location.href = url;
+            }
+        </script>
+       
+       
+    </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</html>
